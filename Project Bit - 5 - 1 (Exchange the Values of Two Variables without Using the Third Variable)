@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	//Exchange the values of two variables without using the third variable.
+	int a = 3;
+	int b = 5;
+	printf("Initial value : a = %d ; b = %d\n", a, b);
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+	printf("Transformed value : a = %d ; b = %d\n", a, b);
+	return 0;
+}
