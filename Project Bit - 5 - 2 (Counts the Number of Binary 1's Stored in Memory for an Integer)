@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+    // Calculate the number of 1s in the binary representation of an integer stored in memory.
+    int num = 0;
+    printf("Please enter the number to calculate: ");
+    scanf("%d", &num); 
+    int count = 0; // Counter
+    while (num)
+    {
+        count++;
+        num = num & (num - 1);
+    }
+    printf("\nThe number of 1s in binary = %d\n", count);
+    return 0;
+}
